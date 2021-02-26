@@ -1,0 +1,62 @@
+<p>bank-clients works!</p>
+<div class="container">
+    <div class="alert alert-warning" role="alert" *ngIf="showError">
+      <strong>მოხდა შეცდომა</strong>{{errorText}}
+    </div>
+</div>  
+
+<div class="container">
+    <button class="btn btn-outline-success"[routerLink]="['/clients']" (click)="refresh()">Refresh</button>
+    <form [formGroup]="bankForm" (ngSubmit)="saveClient()">
+        <button class="btn btn-outline-primary" type="submit">save</button>
+    <div class="col-4">
+    <label for="id">Id:</label>
+    <input formControlName="idControl" name="id" class="form-control" [attr.disabled] = "TF"  type="number">
+
+    <label for="name">Name:</label>
+    <input formControlName="nameControl" name="name"  class="form-control" type="text">
+
+    <label for="lastname">Lastname:</label>
+    <input formControlName="lastnameControl" name="year"  class="form-control" type="text">
+
+    <label for="age">Age:</label>
+    <input formControlName="ageControl" name="year" class="form-control" type="number">
+
+    <label for="age">Gender:</label>
+    <select   class="form-control"  formControlName="genderControl">
+        <option value="" > --აირჩიე--</option>
+        <option  *ngFor="let gender of genders" [value]="gender" > {{gender}}</option>
+    </select>
+    
+    <label for="money">Money:</label>
+    <input formControlName="moneyControl" name="year" class="form-control" type="number">
+    
+
+</div>
+    </form>
+</div>
+<div class="container">
+    <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Money</th>
+            <th></th>
+        </thead>
+        <tbody>
+        <tr  *ngFor="let client of clientsArray">
+            <td>{{client.id}}</td>
+            <td>{{client.name}}</td>
+            <td>{{client.lastname}}</td>
+            <td>{{client.age}}</td>
+            <td>{{client.gender}}</td>
+            <td>{{client.money}}</td>
+            <td><button class="btn btn-danger" (click)=deleteClient(client.id)>x</button></td>
+            <td><button class="btn btn-warning" (click)=editClient(client.id)>XXX</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

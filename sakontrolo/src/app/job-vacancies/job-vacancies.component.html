@@ -1,0 +1,15 @@
+<p>job-vacancies works!</p>
+<div class="container">
+ 
+    <select class="form-control"(change)=" changeVacancy($event)">
+        <option value="">airchiet</option>
+        <option *ngFor="let vacancy of  vacancyArray" [value]="vacancy">
+            {{vacancy}}
+        </option>
+    </select>
+  </div>
+
+  <div class="container vacancies">
+      <h5>vakansiis agwera</h5>
+      <p>{{description}}</p>
+  </div>

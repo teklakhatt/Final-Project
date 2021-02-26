@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="alert alert-danger" role="alert" *ngIf="showError">
+      <strong>მოხდა შეცდომა</strong>{{errorText}}
+    </div>
+</div>  
+<div class="container">
+    <form [formGroup]="shopForm" (ngSubmit)="saveProduct()">
+        
+    <div class="col-4">
+    <label for="id">Id:</label>
+    <input formControlName="idControl" name="id" class="form-control" [attr.disabled] = "true" type="number">
+ 
+    <label for="name">Name:</label>
+    <input formControlName="nameControl" name="name" [style.border]="productNameInputColor" class="form-control" type="text">
+ 
+    <label for="price">Price:</label>
+    <input formControlName="priceControl" name="price" [class.redClass] ="productPriceInputColor" class="form-control" type="number">
+ 
+    <label for="quantity">Quantity:</label>
+    <input formControlName="quantityControl" name="quantity"  class="form-control" type="number">
+ 
+    <label for="color">Type:</label>
+    <select   class="form-control"  formControlName="typeControl">
+        <option value="" > --აირჩიე--</option>
+        <option  *ngFor="let type of types" [value]="type"> {{type}}</option>
+    </select>
+    
+    <button class="btn btn-primary" type="submit">save</button>
+</div>
+    </form>
+</div>
+<div class="container">
+    <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Types</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productsArray">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.type}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

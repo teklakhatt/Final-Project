@@ -1,0 +1,15 @@
+<h1>my-number2 works!</h1>
+<input class="form-control" [(ngModel)]="myNumber" type="number"/>
+ 
+<button class="btn btn-info" (click)="damateba()">+</button>
+<button class="btn btn-info" (click)="gamokleba()">-</button>
+
+
+<div class="container">
+    <ol>
+        <li *ngFor="let item of names">{{item}}</li>
+    </ol>
+    <ng-container *ngFor="let item of names"><p>{{item}}</p></ng-container>
+</div>
+<input class="form-control" [(ngModel)]="newName" type="text"/>
+<button class="btn btn-info" (click)="addName()">Add Name</button>

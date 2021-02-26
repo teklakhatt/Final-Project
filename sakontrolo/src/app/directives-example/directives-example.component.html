@@ -1,0 +1,15 @@
+<div class="continer myClass">
+
+<p *ngIf="showParagraph">directives-example works!</p>
+<button type="button" class="btn btn-primary"(click)="hideElement()">hide text</button>
+<button type="button" class="btn btn-primary"(click)="showElement()">show text</button>
+<button type="button" class="btn btn-primary"(click)="toggleElement()">toggle text</button>
+<button type="button" class="btn btn-primary"(click)="toggleElement2()">toggle text2</button>
+
+<ul *ngFor="let item of books">
+    <li>{{item}}</li>
+</ul>
+<ul *ngFor="let item of myNums">
+    <li>{{item}}</li>
+</ul>
+</div>

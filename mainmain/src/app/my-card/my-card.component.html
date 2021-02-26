@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+    <img src="assets/images/111.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{cardTitle}}</h5>
+      <p [style.color] = "textColor" class="card-text">{{cardText}}</p>
+    </div>
+  </div>
+
+  <div class="col-4">
+  <input class="form-control" [(ngModel)]="cardTitle"/>
+
+  <label>Enter new Text: </label>
+  <input class="form-control" [(ngModel)]="cardTextValue"/> 
+  <button class="btn btn-primary"  (click)="changeText()"> Change text</button>
+
+<label>Enter new color: </label>
+<input class="form-control" [(ngModel)] = "textColorValue"/>
+<button class="btn btn-primary" (click)="changeColor()">Change Color</button>
+</div>

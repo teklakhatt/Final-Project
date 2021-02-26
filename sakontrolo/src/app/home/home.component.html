@@ -1,0 +1,34 @@
+<p>home works!</p>
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Library</li>
+    </ol>
+  </nav>
+ 
+  <app-my-table></app-my-table>
+  <app-my-images></app-my-images>
+  <app-select></app-select>
+  <app-my-names></app-my-names>
+  <app-switch-example></app-switch-example>
+  <app-dropdown></app-dropdown>
+  <app-my-card></app-my-card>
+  <app-numbers-check></app-numbers-check>
+  <app-my-calculator></app-my-calculator>
+  <app-my-hello></app-my-hello>
+  <div class="container">
+      <div class="col-3">
+      <input class="form-control" type="text"[(ngModel)]="inputText">
+      <input class="form-control" type="text"[value]="inputText">
+      <p>{{inputText}}</p>
+    <div *ngIf="showDiv">Hello,world!</div>
+
+    <div *ngIf = "isLoggedIn; else isLoggedOut">
+      User is logged in
+    </div>
+    <ng-template #isLoggedOut>
+      user is logged out
+    </ng-template>
+    </div>
+    <app-directives-example></app-directives-example>

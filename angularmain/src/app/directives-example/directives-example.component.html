@@ -1,0 +1,25 @@
+<div class="container myClass">
+
+    <p *ngIf="showParagraph">My text</p>
+    <button type="button" class="btn btn-primary" 
+    (click)="hideElement()">Hide Text</button>
+
+    <button type="button" class="btn btn-primary" 
+    (click)="showElement()">Show Text</button>
+
+    <button type="button" class="btn btn-primary" 
+    (click)="toggleElement()">Toggle Text</button>
+
+    <button type="button" class="btn btn-primary" 
+    (click)="toggleElement2()">Toggle Text2</button>
+
+    <ul *ngFor="let item of books">
+        <li>{{item}}</li>
+    </ul>
+    <ul *ngFor="let item of myNums">
+        <li>{{item}}</li>
+    </ul>
+
+
+
+</div>

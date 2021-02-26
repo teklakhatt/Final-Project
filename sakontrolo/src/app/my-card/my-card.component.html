@@ -1,0 +1,24 @@
+
+  <div class="card" style="width: 18rem;">
+    <img src="assets/images/sponge.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" >{{title}}</h5>
+      <p [style.color]="textColor"class="card-text">{{text}}</p>
+     
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="col-3">
+  <input class="form-control"[(ngModel)]="title"/>
+  <input class="form-control" [(ngModel)]="textValue"/>
+  <label>entert new text:</label>
+  <button class="btn btn-primary"(click)="changeText()"></button>
+  
+  <label>enter new color</label>
+  <input class="form-control" [(ngModel)]="textColorValue"/>
+  <button class="btn btn-primary"(click)="changeColor()">color change</button>
+</div>
+ 
+ 
+  

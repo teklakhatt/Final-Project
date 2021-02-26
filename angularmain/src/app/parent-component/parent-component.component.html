@@ -1,0 +1,28 @@
+
+<div class="container">
+<a routerLink="second"> panda</a>
+ 
+</div>
+ 
+<div class="container">
+<a routerLink="first"> tiger</a>
+</div>
+ 
+<a routerLink="../home">Home</a>
+
+<table class="table">
+    <thead>
+        <th>ცხოველი</th>
+        <th>ასაკი</th>
+        <th>ბინადრობა</th>
+        <th>დეტალები</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let animal of animalData">
+        <td> {{animal.name}}</td>
+        <td> {{animal.age}}</td>
+        <td> {{animal.place}}</td>
+        <td> <a [routerLink]="animal.link">დეტალები</a></td>
+    </tr>
+    </tbody>
+</table>

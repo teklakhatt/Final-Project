@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="col-3">
+        <label>First Number:</label>
+        <input class="form-control" [(ngModel)]="firstNumber" type="number"/>
+    </div>
+    <div class="col-3">
+        <label>Second Number Number:</label>
+        <input class="form-control"  [(ngModel)]="secondNumber" type="number"/>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="calculateNumbers()">Calculate</button>
+    </div>
+
+        <p>this is text .....  {{resultText}} .... uuuuu {{someText}}</p>
+</div>
+
+<div class="container">
+    <div class="col-3">
+        <label>Enter name:</label>
+        <input class="form-control"  [(ngModel)]="nameString" type="text"/>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="checkString()">Check</button>
+    </div>
+
+    <div *ngIf="showDiv">
+shedegi
+    </div>
+</div>

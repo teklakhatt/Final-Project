@@ -1,0 +1,27 @@
+<p>new-calculator works!</p>
+<div class="container">
+    <div *ngIf="error"class="alert alert-warning" role="alert">
+        DO NOT USE 0!
+      </div>
+    
+    <div class="col-3">
+        <label>first number</label>
+        <input class="form-control"[(ngModel)]="num1" type="number"/>
+        <label>second number</label>
+        <input class="form-control"[(ngModel)]="num2" type="number"/>
+        <label>result</label>
+        <input class="form-control"[(ngModel)]="result" type="number"/>
+    </div>
+    <div>
+        
+        <button  class="btn btn-primary"(click)="clear()">C</button>
+    </div>
+    <div>
+        <button  class="btn btn-primary"(click)="plus()">+</button>
+        <button  class="btn btn-primary"(click)="minus()">-</button>
+        <button  class="btn btn-primary"(click)="multyplie()">x</button>
+        <button  class="btn btn-primary"(click)="devide()">/</button>
+    </div>
+    
+    
+</div>

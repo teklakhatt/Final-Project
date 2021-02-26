@@ -1,0 +1,15 @@
+<div class="container">
+    <div *ngIf="showInfo" class="alert alert-info" role="alert">
+        არჩეული მნიშვნელობა არის : {{selectedValue}}
+      </div>
+    <div class="col-3">
+<select class="form-control"(change)="valueChange($event)">
+    <option value="">--აირჩიეთ--</option>
+<option *ngFor="let number of selectValues" [value]="number">
+    {{number}}</option>
+</select>
+
+</div>
+</div>
+
+

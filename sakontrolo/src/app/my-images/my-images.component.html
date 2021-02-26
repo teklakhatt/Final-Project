@@ -1,0 +1,15 @@
+<p>my-images works!</p>
+<div class="container">
+    <img alt="no image"[src]="imgSource" style="width:200px"/>
+    <input type="text"class="form-control"[(ngModel)]="newImage"/>
+    <button type="button"class="btn btn-primary"(click)="changeImage()">shecvla</button>
+</div>
+<div class="container">
+    <img alt="no image"[src]="imgSource" style="width:200px"/>
+    <select class="form-control"(change)=" changeImageSelect($event)">
+        <option value="">_airchiet_</option>
+        <option *ngFor="let image of  ImgArr" [value]="image">
+            {{image}}
+        </option>
+    </select>
+</div>

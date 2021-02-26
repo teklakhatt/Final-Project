@@ -1,0 +1,52 @@
+<p>students-list works!</p>
+<div class="container"> 
+    <table class="table">
+     <thead>
+         <tr>
+             <th> id </th>
+             <th> სახელი </th>
+             <th> გვარი</th>
+             <th> მეილი</th>
+             <th> ასაკი</th>
+             <th> ქალაქი </th>
+             <th> GPA</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr *ngFor='let item of studentTable'>  
+            <td> {{item.id}}</td>
+            <td> {{item.name}}</td>
+            <td> {{item.lastName}}</td>
+            <td> {{item.mail}}</td>
+            <td> {{item.age}}</td>
+            <td> {{item.city}}</td>
+            <td> {{item.GPA}}</td>
+          </tr> 
+     </tbody>
+    </table>
+</div>
+<div class="container">
+    <div class="container">
+        <div class="alert alert-warning" role="alert" *ngIf="showError">
+            <strong>moxda shecdoma</strong>{{errorText}}
+          </div>
+          <div class="alert alert-success" role="alert" *ngIf="showSuccess">
+            <strong>moxda shecdoma</strong>studenti daemata cxrils
+          </div>
+
+                  <div class="form-group"> 
+                    <input type="number" class="form-control" [(ngModel)]="studentId" placeholder="id" >
+                    <input type="text" class="form-control" [(ngModel)]="studentName" placeholder="სახელი" >
+                    <input type="text"  class="form-control"[(ngModel)]="studentLastName" placeholder="გვარი" >
+                    <input type="email" class="form-control" [(ngModel)]="studentEmail" placeholder="მეილი" >
+                    <input type="number"  class="form-control"[(ngModel)]="studentAge" placeholder="ასაკი" >
+                    <select   class="form-control" id="" [(ngModel)]="studentCity" >
+                        <option value="" > --აირჩიე--</option>
+                        <option  *ngFor="let city of cities" [value]="city" > {{city}}</option>
+                    </select>
+                    <input type="number"  class="form-control"[(ngModel)]="studentGPA" placeholder="GPA" >
+                  </div>
+      
+        </div>
+        <button class="btn btn-success"(click)="addStudent2()">damateba</button>
+</div>

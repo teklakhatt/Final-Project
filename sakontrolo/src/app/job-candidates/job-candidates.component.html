@@ -1,0 +1,24 @@
+<p>job-candidates works!</p>
+
+<div class="container">
+ 
+  <select class="form-control"(change)="changeCandidate($event)">
+      <option value="">airchiet</option>
+      <option *ngFor="let candidate of  candidatesArr" [value]="candidate">
+          {{candidate}}
+      </option>
+  </select>
+</div>
+<div class="container" *ngIf="showNothing"></div>
+<div class="container" *ngIf="showNino">
+  <img src="assets/images/panda.jpg"  style="width:200px"/>
+  <p>23 wlis</p>
+</div>
+<div class="container" *ngIf="showMegi">
+  <img src="assets/images/tiger.jpg"  style="width:200px"/>
+  <p>33 wlis</p>
+</div>
+<div class="container" *ngIf="showAna">
+  <img src="assets/images/sponge.jpg"  style="width:200px"/>
+  <p>10 wlis</p>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+    <div *ngIf="showError" class="alert alert-danger" role="alert">
+        You cannot divide by 0!
+      </div>
+    <div class="col-3">
+        <label>First Number:</label>
+        <input class="form-control" [(ngModel)]="firstNumber" type="number"/>
+    </div>
+    <div class="col-3">
+        <label>Second Number Number:</label>
+        <input class="form-control"  [(ngModel)]="secondNumber" type="number"/>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="calculateNumbers()">Calculate</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="clearValues()">Clear</button>
+    </div>
+    <div class="col-3">
+        <label>Result:</label>
+        <input class="form-control"  [(ngModel)]="result" type="number"/>
+    </div>
+      
+</div>

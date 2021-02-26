@@ -1,0 +1,70 @@
+<p>cars-list works!</p>
+<div class="container">
+  <div class="alert alert-warning" role="alert" *ngIf="showChangeYearError">
+    <strong>moxda shecdoma</strong>mocemuli idit elementi ver moidzebna
+  </div>
+
+
+  <div class="alert alert-warning" role="alert" *ngIf="showError">
+    <strong>moxda shecdoma</strong>{{errorText}}
+  </div>
+
+    <button (click)="changeName()">change name</button>
+    <form [formGroup]="carForm" (ngSubmit)="saveCar()">
+  
+      <button class="btn btn-primary" type="submit" (click)="saveCar()">save</button>
+    <div class="col-4">
+    <label for="id">Id:</label>
+    <input formControlName="idControl" name="id" class="form-control" [attr.disabled] type="number">
+
+    <label for="name">Name:</label>
+    <input formControlName="nameControl" name="name"  class="form-control" type="text" >
+
+    <label for="year">Year:</label>
+    <input formControlName="yearControl" name="year" class="form-control" type="number">
+
+    <label for="color">Color:</label>
+    <select   class="form-control"  formControlName="colorControl">
+        <option value="" > --აირჩიე--</option>
+        <option  *ngFor="let color of colors" [value]="color" > {{color}}</option>
+    </select>
+    
+
+</div>
+</form>
+</div>
+<div class="container">
+  <div class="col-3">
+<input  type="number"[(ngModel)]="inputId">
+</div>
+<button class="btn btn-primary" (click)="changeYear()">check</button>
+</div>
+
+
+
+<div class="container">
+    <table class="table">
+      <thead>
+        <th>ID</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Color</th>
+        <th></th>
+        
+      </thead>
+      <tbody> 
+    <tr *ngFor="let car of carArray">
+        <td>{{car.id}}</td>
+        <td>{{car.name}}</td>
+        <td>{{car.year}}</td>
+        <td>{{car.color}}</td>
+        <td><button class="btn btn-danger" (click)=deleteCar(car.id)>x</button></td>
+        <td><button class="btn btn-warning" (click)=edit(car.id)>x</button></td>
+          
+    </tr>
+    </tbody>
+</table>
+
+</div>
+
+<!--<p>input value is {{nameControl.value}}</p>-->

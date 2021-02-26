@@ -1,0 +1,36 @@
+
+
+<div class="container">
+<table class="table">
+<thead>
+<tr>
+<th> სახელი </th>
+<th> გვარი</th>
+<th> მეილი</th>
+<th> ასაკი</th>
+<th> ქალაქი </th>
+<th> GPA</th>
+
+ 
+</tr>
+</thead>
+
+<tbody>
+<tr *ngFor='let item of studentTable'>
+
+<td> {​​​​​​​​{​​​​​​​​item.name}​​​​​​​​}​​​​​​​​</td>
+<td> {​​​​​​​​{​​​​​​​​item.lastName}​​​​​​​​}​​​​​​​​</td>
+<td> {​​​​​​​​{​​​​​​​​item.mail}​​​​​​​​}​​​​​​​​</td>
+<td> {​​​​​​​​{​​​​​​​​item.age}​​​​​​​​}​​​​​​​​</td>
+<td> {​​​​​​​​{​​​​​​​​item.city}​​​​​​​​}​​​​​​​​</td>
+<td> {​​​​​​​​{​​​​​​​​item.GPA}​​​​​​​​}​​​​​​​​</td>
+
+
+
+ 
+</tr>
+
+</tbody>  
+ 
+</table>
+</div>

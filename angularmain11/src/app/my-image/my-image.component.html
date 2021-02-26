@@ -1,0 +1,13 @@
+<div class="container">
+    <img alt="no image" [src]="imgSource" style="width:200px;"/>
+   <!-- <input type="text" class="form-control" [(ngModel)]="newImage"/>
+    <button type="button" class="btn btn-primary"(click)="changeImage()">შეცვლა</button>-->
+    <div class="col-3">
+        <select class="form-control"(change)="changeImageSelect($event)">
+            <option value="">--აირჩიეთ--</option>
+        <option *ngFor="let image of imgArray" [value]="image">
+            {{image}}</option>
+        </select>
+        
+        </div>
+</div>

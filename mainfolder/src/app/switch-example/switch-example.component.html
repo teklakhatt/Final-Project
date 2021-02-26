@@ -1,0 +1,11 @@
+<div class="container">
+<select [(ngModel)]="selectedName">
+    <option *ngFor="let item of names" [value] ="item">{{item}}</option>
+</select>
+
+<div class="row" [ngSwitch]="selectedName">
+<div *ngSwitchCase="'irina'">Irina is Selected</div>
+<div *ngSwitchCase="'nino'">NIno is Selected</div>
+<div *ngSwitchDefault>Gvantsa is selected</div>
+</div>
+</div>

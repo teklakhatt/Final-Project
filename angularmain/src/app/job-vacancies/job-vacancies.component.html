@@ -1,0 +1,14 @@
+<h1>ვაკანსიები</h1>
+<div class="col-3">
+    <select class="form-control"(change)="changeVacancy($event)">
+        <option value="">--აირჩიეთ--</option>
+    <option *ngFor="let vacancy of vacancyArray" [value]="vacancy">
+        {{vacancy}}</option>
+    </select>
+    
+    </div>
+
+    <div>
+        <h1>ვაკანსიის აღწერა</h1>
+        <p>{{description}}</p>
+    </div>

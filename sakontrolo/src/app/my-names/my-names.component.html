@@ -1,0 +1,6 @@
+<p>my-names works!</p>
+<ol>
+    <li  *ngFor="let item of names">{{item}}</li>
+</ol>
+<input class="form-control"[(ngModel)]="newName" type="text"/>
+<button  class="btn btn-primary"(click)="addName()">numbers check</button>
