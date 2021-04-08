@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center {
+  padding-top: 20%;
+  padding-bottom: 50%;
+  top: 50%;
+  left: 50%;
+}
+.header1 {
+  color: rgb(253, 202, 61);
+}
+.background1 {
+  background-image: url("src/assets/images/image-folder/images/intro_pic.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

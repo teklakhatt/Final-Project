@@ -29,6 +29,8 @@ import { MyStudentsComponent } from './my-students/my-students.component';
 import { MyCarsComponent } from './my-cars/my-cars.component';
 import { ShopComponent } from './shop/shop.component';
 import { BankClientsComponent } from './bank-clients/bank-clients.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +59,9 @@ import { BankClientsComponent } from './bank-clients/bank-clients.component';
     MyStudentsComponent,
     MyCarsComponent,
     ShopComponent,
-    BankClientsComponent
+    BankClientsComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

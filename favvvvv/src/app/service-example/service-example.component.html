@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Types</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productsArray">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.type}}</td>    
+        </tr>
+        </tbody>
+    </table>
+</div>

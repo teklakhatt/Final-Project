@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let toy of toysArray">
+            <td>{{toy.id}}</td>
+            <td>{{toy.name}}</td>
+            <td>{{toy.price}}</td>
+            <td>{{toy.type}}</td>
+            <td><button class="btn btn-primary" (click)="delete(toy.id)">Delete</button></td>
+            <td><button class="btn btn-primary"(click)="edit(toy.id)">Edit</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-toys-form (toysadd)="ToysAddHandler($event)" [maxId]="max" [toy]="editToy"></app-toys-form>

@@ -1,0 +1,24 @@
+<div class="container">
+    <form [formGroup]='toyForm' (ngSubmit)='saveToy()'>
+       <label for="name">id:</label>
+       <input type="number" name="id" class="form-control" [attr.disabled] = "true"  formControlName="idControl" >
+   
+     <label for="name">name:</label>
+     <input type="text" name="name" class="form-control" formControlName="nameControl" >
+   
+     <label for="name">price:</label>
+     <input type="number" name="price" class="form-control"  formControlName="priceControl" >
+ 
+     <label for="color">Type:</label>
+    <select   class="form-control"  formControlName="typeControl">
+        <option value="" > --აირჩიე--</option>
+        <option  *ngFor="let type of types" [value]="type"> {{type}}</option>
+    </select>
+    
+     <button type="submit" class="btn btn-warning"> submit </button>
+     <button type="button" class="btn btn-primary"(click)="clearForm()"> clear form </button>
+            
+ 
+   </form>
+   
+   </div>

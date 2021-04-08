@@ -1,0 +1,20 @@
+
+<div class="container">
+<p>this is parent component</p>
+<button class="btn btn-primary" (click)="addNumber()">+</button>
+<button class="btn btn-primary" (click)="minusNumber()">-</button>
+
+<input type="text" class="form-control" [(ngModel)]="inputName"/>
+<button class="btn btn-primary"(click)="hello()">Say Hello</button>
+
+
+<input type="number" class="form-control" [(ngModel)]="parentVal1">
+<input type="number" class="form-control" [(ngModel)]="parentVal2">
+<button class="btn btn-primary"(click)="sum()">Sum</button>
+
+<app-child [count]=parentCounter [name]=childName 
+ [val1]=childVal1
+ [val2]=childVal2
+ ></app-child>
+
+</div>
